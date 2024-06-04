@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="minijs.css">
+</head>
+<body>
+    <div class="container"> 
+    <h1 class="pass1">Password Generator</h1>
+    <div class="img">
+        <input class="pass" placeholder="Password" readonly="" class="display" id="password-display">
+        <button class="copy-btn">
+            <img src="copy.svg" alt="copy" width="10px" height="10px">
+        </button>
+    </div>
+
+    <div class="input-container">
+
+        <!-- password lenght section -->
+
+        <div class="password-info">
+            <p>Password Length</p>
+            <p class="password-length">0</p>
+        </div>
+
+        <!-- 
+        slider section -->
+        <div class="slider">
+            <input type="range" min="4" max="20" class="slider" id="myRange" step="1">
+        </div>
+
+
+        <!-- checkbox div -->
+        <div>
+            <input type="checkbox" class="checkbox" id="uppercase" onclick="handleCheckBoxes('uppercase')">
+            <label>Include Uppercase</label>
+        </div>
+        <div>
+            <input type="checkbox" class="checkbox" id="lowercase" onclick="handleCheckBoxes('lower')">
+            <label>Include Lowercase</label>
+        </div>
+        <div>
+            <input type="checkbox" class="checkbox" id="numbers" onclick="handleCheckBoxes('number')">
+            <label>Include Number</label>
+        </div>
+        <div>
+            <input type="checkbox" class="checkbox" id="symbols" onclick="handleCheckBoxes('symbol')">
+            <label>Include symbol</label>
+        </div>
+
+
+        <!-- strenth section -->
+        <div>
+            <p> Strength</p>
+            <div class="strenght-icon"></div>
+        </div>
+        <button class="generatepassword">Generate Password</button>
+    </div>
+
+    <script src="minijs.js"></script>
+
+</body>
+</html>
+
